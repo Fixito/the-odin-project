@@ -6,7 +6,8 @@
 }
 
 .hello {
-  color: red;
+  color: blue;
+  font-size: 2rem;
   font-family: 'MyFont', cursive;
   background: url('./image.jpg');
 }
