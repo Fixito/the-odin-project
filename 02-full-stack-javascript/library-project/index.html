@@ -4,13 +4,61 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- normalize -->
+    <link rel="stylesheet" href="./normalize.css" />
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
-    <script src="./index.js" defer></script>
+    <!-- JS -->
+    <script type="module" src="./index.js" defer></script>
     <title>Librairie</title>
   </head>
   <body>
-    <div class="book-center"></div>
-    <button class="btn">nouveau livre</button>
-    <div class="add-books"></div>
+    <section class="library-section">
+      <div class="title">
+        <h2>ma liste de livres</h2>
+        <div class="title-underline"></div>
+      </div>
+      <button class="btn add-btn">
+        nouveau livre <i class="fas fa-book-medical"></i>
+      </button>
+      <div class="books-center"></div>
+      <div class="modal-overlay">
+        <form class="form">
+          <h5>ajouter un livre</h5>
+          <div class="form-row">
+            <label for="title" class="form-label">titre</label>
+            <input type="text" id="title" name="title" class="form-input" />
+          </div>
+          <div class="form-row">
+            <label for="author" class="form-label">auteur</label>
+            <input type="text" id="author" name="author" class="form-input" />
+          </div>
+          <div class="form-row">
+            <label for="pages" class="form-label">nombre de pages</label>
+            <input type="text" id="pages" name="pages" class="form-input" />
+          </div>
+          <div class="form-row">
+            <p class="form-label">avez-vous lu le livre ?</p>
+            <div>
+              <input type="radio" id="read" name="read" value="1" />
+              <label for="read">oui</label>
+            </div>
+            <div>
+              <input type="radio" id="notRead" name="read" value="0" />
+              <label for="notRead">non</label>
+            </div>
+          </div>
+          <button class="btn btn-block">ajouter</button>
+        </form>
+      </div>
+    </section>
   </body>
 </html>
