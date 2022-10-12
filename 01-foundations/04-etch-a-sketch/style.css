@@ -1,0 +1,23 @@
+body {
+  min-height: 100vh;
+  display: grid;
+  justify-items: center;
+  gap: 3rem;
+}
+
+.btn {
+  align-self: flex-end;
+}
+
+.sketchboard {
+  align-self: flex-start;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1/1;
+  border: 1px solid black;
+  display: grid;
+}
+
+.box {
+  width: 100%;
+}

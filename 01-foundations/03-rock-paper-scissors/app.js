@@ -1,48 +1,59 @@
-const choice = ['pierre', 'papier', 'ciseaux'];
+const choices = ['pierre', 'papier', 'ciseaux'];
 const NUMBER_OF_ROUNDS = 5;
 
 const getComputerChoice = () => {
-  return choice[Math.floor(Math.random() * choice.length)];
+  return choices[Math.floor(Math.random() * choices.length)];
 };
 
-const playRound = (playerSelection, computerSelection, scores) => {
-  playerSelection = playerSelection.toLowerCase();
-
-  if (playerSelection === 'pierre' && computerSelection === 'papier') {
-    console.log('Tu perds ! Le Papier bat la Pierre');
-    return { ...scores, cpu: scores.cpu + 1 };
-  } else if (playerSelection === 'pierre' && computerSelection === 'ciseaux') {
-    console.log('Tu gagnes ! La Pierre bat les Ciseaux');
-    return { ...scores, player: scores.player + 1 };
+const playRound = (playerSelection, computerSelection) => {
+  if (playerSelection === computerSelection) {
+    console.log("C'est une égalité");
+    return 0;
+  } else if (
+    (playerSelection === 'pierre' && computerSelection === 'ciseaux') ||
+    (playerSelection === 'papier' && computerSelection === 'pierre') ||
+    (playerSelection === 'ciseaux' && computerSelection === 'papier')
+  ) {
+    console.log('Vous avez gagnez cette manche');
+    return 1;
   } else {
-    console.log('Égalité !');
-    return scores;
+    console.log('Vous avez perdez cette manche');
+    return -1;
   }
 };
 
 const game = () => {
-  let scores = {
-    player: 0,
-    cpu: 0
-  };
+  let score = 0;
 
   for (let i = 0; i < NUMBER_OF_ROUNDS; i++) {
-    const playerSelection = prompt('Entrez votre choix :');
     const computerSelection = getComputerChoice();
+    let playerSelection;
 
-    scores = playRound(playerSelection, computerSelection, scores);
+    do {
+      playerSelection = prompt(
+        'Entrez une valeur parmi : pierre, papier ou ciseaux'
+      );
+
+      if (!playerSelection || playerSelection === null) {
+        return;
+      } else {
+        playerSelection = playerSelection.toLowerCase();
+      }
+    } while (
+      playerSelection != 'pierre' &&
+      playerSelection != 'papier' &&
+      playerSelection != 'ciseaux'
+    );
+
+    score += playRound(playerSelection, computerSelection);
   }
 
-  const { player, cpu } = scores;
-
-  console.log(`Joueur : ${player} - CPU: ${cpu}`);
-
-  if (player > cpu) {
-    console.log('Le joueur gagne !');
-  } else if (player < cpu) {
-    console.log("L'ordinateur gagne !");
+  if (score === 0) {
+    console.log('Math nul.');
+  } else if (score > 0) {
+    console.log('Vous remportez la partie !');
   } else {
-    console.log('Match nul !');
+    console.log('Vous perdez la partie :(');
   }
 };
 
