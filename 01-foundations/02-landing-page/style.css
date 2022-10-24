@@ -236,6 +236,11 @@ ul {
   padding: 0.75rem 1.5rem;
 }
 
+.hero-btn:hover {
+  background-color: #fff;
+  color: var(--clr-accent);
+}
+
 @media screen and (max-width: 640px) {
   .hero-center {
     flex-direction: column;
@@ -274,7 +279,6 @@ ul {
 }
 
 .card {
-  /* flex: 1 1 calc(25% - 3rem); */
   flex: 1;
 }
 
@@ -352,7 +356,7 @@ figcaption {
 
 .btn-cta:hover {
   background-color: var(--white);
-  color: var(--clr-accent-dark);
+  color: var(--clr-accent);
 }
 
 @media screen and (max-width: 640px) {
