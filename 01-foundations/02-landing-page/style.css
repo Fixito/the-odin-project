@@ -13,7 +13,8 @@ html {
 :root {
   /* colors */
   --clr-primary-dark: #1f2937;
-  --clr-accent: #3882f6;
+
+  --clr-accent: hsl(45, 93%, 47%);
   --clr-accent-dark: hsl(217, 95%, 46%);
 
   --clr-heading: #f9faf8;
@@ -169,6 +170,37 @@ ul {
   gap: 1rem;
 }
 
+@media screen and (max-width: 640px) {
+  .nav-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .toggle-btn {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    transition: all 0.3s linear;
+  }
+
+  .toggle-btn:hover {
+    rotate: 90deg;
+    color: var(--clr-body);
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 641px) {
+  .toggle-btn {
+    display: none;
+  }
+}
+
 .nav-item {
   color: var(--clr-body);
   font-size: 1.125rem;
@@ -200,6 +232,21 @@ ul {
   margin-bottom: 0.5rem;
 }
 
+.hero-btn {
+  padding: 0.75rem 1.5rem;
+}
+
+@media screen and (max-width: 640px) {
+  .hero-center {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+
+  .hero-title {
+    font-size: 2.441rem;
+  }
+}
+
 /**  CARDS */
 .card-section {
   padding: 3rem 0;
@@ -211,6 +258,12 @@ ul {
   font-weight: 900;
   text-align: center;
   margin-bottom: 4rem;
+}
+
+@media screen and (max-width: 640px) {
+  .section-title {
+    font-size: 1.563rem;
+  }
 }
 
 .cards-center {
@@ -226,7 +279,7 @@ ul {
 }
 
 .card-img {
-  border: 3px solid var(--clr-accent);
+  border: 3px solid hsl(217, 91%, 59%);
   border-radius: var(--border-radius);
   max-width: 200px;
   margin: 0 auto;
@@ -259,9 +312,19 @@ figcaption {
   text-align: right;
 }
 
+@media screen and (max-width: 640px) {
+  blockquote {
+    font-size: 1rem;
+  }
+
+  figcaption {
+    font-size: 0.8em;
+  }
+}
+
 /** CALL TO ACTION */
 .cta-center {
-  background-color: var(--clr-accent);
+  background-color: hsl(217, 91%, 59%);
   color: var(--white);
   border-radius: var(--border-radius);
   padding: 2rem 5rem;
@@ -271,6 +334,7 @@ figcaption {
 }
 
 .cta-title {
+  font-weight: 600;
   margin-bottom: 0;
 }
 
@@ -280,13 +344,32 @@ figcaption {
 }
 
 .btn-cta {
+  background-color: hsl(45, 93%, 47%);
   border: 1px solid var(--white);
   color: var(--white);
+  padding: 0.75rem 1.5rem;
 }
 
 .btn-cta:hover {
   background-color: var(--white);
   color: var(--clr-accent-dark);
+}
+
+@media screen and (max-width: 640px) {
+  .cta-center {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+
+  .cta-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .btn-cta {
+    width: 100%;
+    border: none;
+  }
 }
 
 /** FOOTER */
