@@ -5,7 +5,7 @@
 }
 
 /** fonts */
-@import url('https://fonts.googleapis.com/css?family=Karla:400|Spectral:400');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400|Lora:400');
 
 html {
   font-size: 100%;
@@ -14,22 +14,22 @@ html {
 :root {
   /* colors */
   /* primary */
-  --primary-100: hsl(244, 100%, 94%);
-  --primary-200: hsl(243, 100%, 87%);
-  --primary-300: hsl(243, 100%, 81%);
-  --primary-400: hsl(243, 100%, 75%);
-  --primary-500: hsl(243, 100%, 68%);
-  --primary-600: hsl(243, 56%, 55%);
-  --primary-700: hsl(243, 47%, 41%);
-  --primary-800: hsl(243, 47%, 27%);
-  --primary-900: hsl(244, 48%, 14%);
+  --primary-100: hsl(217, 90%, 92%);
+  --primary-200: hsl(217, 90%, 84%);
+  --primary-300: hsl(217, 92%, 76%);
+  --primary-400: hsl(217, 91%, 68%);
+  --primary-500: hsl(217, 91%, 60%);
+  --primary-600: hsl(217, 61%, 48%);
+  --primary-700: hsl(217, 62%, 36%);
+  --primary-800: hsl(217, 61%, 24%);
+  --primary-900: hsl(217, 61%, 12%);
   /* grey */
   --grey-50: hsl(210, 40%, 98%);
   --grey-100: hsl(210, 40%, 96%);
   --grey-200: hsl(214, 32%, 91%);
   --grey-300: hsl(213, 27%, 84%);
   --grey-400: hsl(215, 20%, 65%);
-  --grey-500: #65758b;
+  --grey-500: hsl(215, 16%, 47%);
   --grey-600: hsl(215, 19%, 35%);
   --grey-700: hsl(215, 25%, 27%);
   --grey-800: hsl(217, 33%, 17%);
@@ -44,9 +44,16 @@ html {
   --green-dark: #0f5132;
 
   /* fonts */
-  --headingFont: 'Spectral', serif;
-  --bodyFont: 'Karla', sans-serif;
+  --headingFont: 'Lora', serif;
+  --bodyFont: 'Roboto', sans-serif;
   --smallText: 0.7em;
+  --font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
+  --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+  --font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+  --font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+  --font-size-xl: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
+  --font-size-xxl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+  --font-size-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
 
   /* rest of the vars */
   --backgroundColor: var(--grey-50);
@@ -76,6 +83,7 @@ body {
 p {
   margin-bottom: 1.5rem;
   max-width: 40em;
+  font-size: var(--font-size-base);
 }
 
 h1,
@@ -93,27 +101,27 @@ h5 {
 
 h1 {
   margin-top: 0;
-  font-size: 3.052rem;
+  font-size: var(--font-size-xxxl);
 }
 
 h2 {
-  font-size: 2.441rem;
+  font-size: var(--font-size-xxl);
 }
 
 h3 {
-  font-size: 1.953rem;
+  font-size: var(--font-size-xl);
 }
 
 h4 {
-  font-size: 1.563rem;
+  font-size: var(--font-size-lg);
 }
 
 h5 {
-  font-size: 1.25rem;
+  font-size: var(--font-size-md);
 }
 
 small,
-.text_small {
+.text-small {
   font-size: var(--smallText);
 }
 
@@ -132,43 +140,14 @@ ul {
   object-fit: cover;
 }
 
-/** buttons */
-.btn {
-  cursor: pointer;
-  color: var(--white);
-  background: var(--primary-500);
-  border: transparent;
-  border-radius: var(--border-radius);
-  letter-spacing: var(--letter-spacing);
-  padding: 0.375rem 0.75rem;
-  box-shadow: var(--shadow-1);
-  transition: var(---transition);
-  text-transform: capitalize;
-  display: inline-block;
-}
-
-.btn:hover {
-  background: var(--primary-700);
-  box-shadow: var(--shadow-3);
-}
-
-.btn-hipster {
-  color: var(--primary-500);
-  background: var(--primary-200);
-}
-
-.btn-hover:hover {
-  color: var(--primary-200);
-  background: var(--primary-700);
-}
-
-.btn-block {
-  width: 100%;
+figure {
+  margin: 0;
 }
 
 /** title */
 .title {
   text-align: center;
+  margin-bottom: 5rem;
 }
 
 .title h2 {
