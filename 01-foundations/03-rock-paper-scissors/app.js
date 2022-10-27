@@ -37,6 +37,7 @@ const playRound = (playerSelection, computerSelection) => {
 
 btns.forEach((btn) => {
   btn.addEventListener('click', (e) => {
+    if (btn.classList.contains('play-again')) return;
     const playerSelection = e.currentTarget.dataset.selection;
     const computerSelection = getComputerChoice();
     const iconClassList = e.currentTarget.children[0].classList.value;
