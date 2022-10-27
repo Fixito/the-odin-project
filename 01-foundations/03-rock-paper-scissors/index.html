@@ -1,13 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pierre Papier Ciseaux</title>
-    <script src="./app.js"></script>
+    <!-- normalize -->
+    <link rel="stylesheet" href="./normalize.css" />
+    <!-- style -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <!-- javascript -->
+    <script src="./app.js" defer></script>
   </head>
   <body>
-    <h1>Pierre Papier Ciseaux</h1>
+    <div class="title">
+      <h2>Pierre Papier Ciseaux</h2>
+      <div class="title-underline"></div>
+    </div>
+
+    <section class="section section-center">
+      <div class="btn-container">
+        <button class="btn btn-sign" data-selection="rock">
+          <i class="fas fa-hand-back-fist"></i>
+        </button>
+        <button class="btn btn-sign" data-selection="paper">
+          <i class="fas fa-hand"></i>
+        </button>
+        <button class="btn btn-sign" data-selection="scissors">
+          <i class="fas fa-hand-peace"></i>
+        </button>
+      </div>
+
+      <div class="results">
+        <!-- human -->
+        <div class="result">
+          <div class="human-sign">
+            <i class="fas fa-question"></i>
+          </div>
+          <div class="score">score : <span class="human-score">0</span></div>
+        </div>
+        <!-- cpu -->
+        <div class="result">
+          <div class="cpu-sign">
+            <i class="fas fa-question"></i>
+          </div>
+          <div class="score">score : <span class="cpu-score">0</span></div>
+        </div>
+      </div>
+      <p class="comment"></p>
+      <button class="btn play-again">rejouer</button>
+    </section>
   </body>
 </html>
