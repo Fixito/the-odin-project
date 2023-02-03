@@ -9,8 +9,6 @@ const notFoundPage = readFileSync('./404.html');
 const server = http.createServer((req, res) => {
   const url = req.url;
 
-  console.log(url);
-
   if (url === '/') {
     res
       .writeHead(200, {
