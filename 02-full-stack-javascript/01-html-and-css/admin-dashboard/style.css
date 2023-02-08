@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Roboto', sans-serif;
+    @apply bg-gray-100 leading-7 text-gray-900;
+  }
+
+  p {
+    @apply mb-6 max-w-2xl text-base;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply font-medium leading-5;
+  }
+
+  h1 {
+    @apply text-5xl;
+  }
+
+  h2 {
+    @apply text-xl;
+  }
+
+  h3 {
+    @apply mb-2 text-lg;
+  }
+
+  small {
+    @apply text-sm;
+  }
+
+  a {
+    @apply text-white;
+  }
+
+  img {
+    @apply object-cover;
+  }
+}
+
+/* GLOBAL STYLES */
+
+.btn {
+  @apply rounded-full bg-blue-500 px-6 py-1 text-white transition duration-300 ease-linear hover:bg-blue-700 hover:shadow;
+}
+
+.btn-hipster {
+  @apply bg-blue-200 text-blue-500 hover:bg-blue-700 hover:text-blue-200;
+}
+
+.btn-block {
+  @apply w-full;
+}
+
+.alert {
+  @apply mb-4 px-2 py-1;
+}
+
+.alert-danger {
+  @apply bg-red-200 text-red-700;
+}
+
+.alert-success {
+  @apply bg-green-200 text-green-700;
+}
+
+.form {
+  @apply mx-auto my-12 block w-11/12 max-w-screen-sm rounded bg-white py-8 px-10 shadow;
+}
+
+.form-label {
+  @apply mb-2 block text-sm tracking-wide;
+}
+
+.form-input,
+.form-textarea {
+  @apply w-full rounded border bg-gray-50 px-2 py-1;
+}
+
+.form-row {
+  @apply mb-4;
+}
+
+.form-textarea {
+  @apply h-28;
+}
+
+.form-alert {
+  @apply tracking-wide text-red-700;
+}
+
+.loading {
+  @apply mx-auto my-0 h-24 w-24 animate-spin rounded-full border-4 border-gray-400 border-t-blue-500;
+}
+
+.title {
+  @apply text-center;
+}
+
+.title h2 {
+  @apply mb-1;
+}
+
+.title-underline {
+  @apply my-0 mx-auto h-1 w-28 bg-blue-700;
+}
+
+.card {
+  @apply rounded-md bg-white p-6 shadow-md;
+}
+
+/** SIDEBAR */
+
+.sidebar-link {
+  @apply ml-2 inline-flex items-start gap-7 text-sm font-bold hover:underline hover:decoration-2 hover:underline-offset-8;
+}
+
+.link-icon {
+  @apply h-6 w-6 fill-current text-white;
+}
+
+/** PROJECTS */
+
+.project-card {
+  @apply cursor-pointer rounded-md border-l-8 border-l-gold bg-white p-6 shadow-md transition-all duration-300 ease-linear hover:shadow-lg;
+}
+
+.icon {
+  @apply h-6 w-6 cursor-pointer fill-current transition-all duration-300 ease-linear hover:text-gray-500;
+}
+
+/** ANNOUNCEMENTS */
+
+.announce-card {
+  @apply cursor-pointer py-4 transition duration-300 ease-linear hover:opacity-60;
+}
+
+.announce-card:not(:last-child) {
+  @apply border-b-2;
+}
+
+.announce-text {
+  @apply mb-0 text-sm font-light text-gray-500;
+}
+
+/** TRENDING */
+.trend-card {
+  @apply flex cursor-pointer gap-4 p-2 transition duration-300 ease-linear hover:opacity-80;
+}
+
+.trend-card p {
+  @apply mb-0;
+}
+
+.trend-card p:nth-child(2) {
+  @apply text-sm text-gray-400;
+}
+
+.profile-picture {
+  @apply h-12 w-12 rounded-full;
+}
