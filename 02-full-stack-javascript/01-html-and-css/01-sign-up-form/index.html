@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./style.css" rel="stylesheet" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <main class="container grid place-items-center min-h-screen">
+      <article class="lg:grid lg:grid-cols-[repeat(auto-fit,minmax(0%,_1fr))]">
+        <div class="hidden lg:flex lg:flex-col lg:justify-between py-2">
+          <div class="linear-gradient justify-self-center py-2 relative top-32">
+            <img
+              class="max-w-[75px] mx-auto"
+              src="./assets/odin-lined.png"
+              alt="Logo The Odin Project"
+            />
+          </div>
+          <p class="text-white font-normal text-sm text-center opacity-80">
+            Photo by <u>Halie West</u> on <u>Unsplash</u>
+          </p>
+        </div>
+        <div class="bg-gray-50 py-6 lg:py-24">
+          <div class="px-8">
+            <p class="mb-4">
+              This is not real online! You know you need something like this in
+              your life to help you realize your deepest dreams. Sign up now to
+              get started.
+            </p>
+            <p class="mb-10">You know you want to.</p>
+          </div>
+          <form>
+            <div class="bg-white py-6 px-10 shadow-md mb-8">
+              <h1 class="mb-6 font-semibold">Let's do this!</h1>
+              <div class="lg:grid lg:grid-cols-2 lg:gap-x-8">
+                <div class="form-row">
+                  <label class="form-label" for="firstName">first name</label>
+                  <input
+                    class="form-input"
+                    type="text"
+                    name="firstName"
+                    id="firstName"
+                  />
+                </div>
+                <div class="form-row">
+                  <label class="form-label" for="lastName">last name</label>
+                  <input
+                    class="form-input"
+                    type="text"
+                    name="lastName"
+                    id="lastName"
+                  />
+                </div>
+                <div class="form-row">
+                  <label class="form-label" for="email">email</label>
+                  <input
+                    class="form-input"
+                    type="email"
+                    name="email"
+                    id="email"
+                  />
+                </div>
+                <div class="form-row">
+                  <label class="form-label" for="phone">phone number</label>
+                  <input
+                    class="form-input"
+                    type="phone"
+                    name="phone"
+                    id="phone"
+                  />
+                </div>
+                <div class="form-row">
+                  <label class="form-label" for="password">password</label>
+                  <input
+                    class="form-input"
+                    type="password"
+                    name="password"
+                    id="password"
+                  />
+                  <span class="form-alert"></span>
+                </div>
+                <div class="form-row">
+                  <label class="form-label" for="confirmPassword"
+                    >confirm password</label
+                  >
+                  <input
+                    class="form-input"
+                    type="password"
+                    name="confirmPassword"
+                    id="confirmPassword"
+                  />
+                </div>
+              </div>
+            </div>
+            <button class="btn ml-10" type="submit">Create Account</button>
+            <p class="ml-10 text-sm font-normal">
+              Already have an account? <a href="#">Log in</a>
+            </p>
+          </form>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
