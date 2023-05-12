@@ -13,11 +13,15 @@ function playRound(playerSelection, computerSelection) {
   // le code
 }
 
-const playerSelection = 'rock';
+const playerSelection = 'pierre';
 const computerSelection = getComputerChoice();
 console.log(playRound(playerSelection, computerSelection));
 ```
 
-4. Écrire une NOUVELLE fonction appelée `game()`. Appeler la fonction `playRound` à l'intérieur de celle-ci pour jouer à un jeu de 5 tours qui enregistre le score et rapporte un gagnant ou un perdant à la fin
+4. Écrire une NOUVELLE fonction appelée `game()`. Appeler la fonction `playRound` à l'intérieur de celle-ci pour jouer à un jeu de `5 tours` qui enregistre le score et rapporte un gagnant ou un perdant à la fin
 
 - Utiliser `prompt()` pour obtenir l'entrée de l'utilisateur
+
+## Rendu
+
+Lien vers le repo GitHub
