@@ -154,6 +154,7 @@ ul {
 
 /** NAVBAR */
 .nav-center {
+  block-size: 4rem;
   display: flex;
   align-items: center;
 }
@@ -216,6 +217,7 @@ ul {
 /** HERO */
 .header {
   background-color: var(--clr-primary-dark);
+  min-block-size: calc(100dvh - 4rem);
 }
 
 .hero-center {
